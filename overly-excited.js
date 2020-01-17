@@ -12,10 +12,12 @@ function addExcitement (theWordArray) {
     let buildMeUp = ""
 
     for (let i = 0; i < theWordArray.length; i++) {
-        // Concatenate the new word onto buildMeUp
-        buildMeUp += theWordArray[i] + " ";
-
-        // Print buildMeUp to the console
+        if ((i + 1) % 3 === 0) {
+            buildMeUp += theWordArray[i] + "! ";
+        } else {
+            buildMeUp += theWordArray[i] + " ";
+        }
+        
         console.log(buildMeUp);
     }
 
@@ -23,3 +25,4 @@ function addExcitement (theWordArray) {
 
 // Invoke the function and pass in the array
 addExcitement(sentence);
+
